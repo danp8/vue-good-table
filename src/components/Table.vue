@@ -1209,6 +1209,7 @@ export default {
     },
 
      onCellMouseDown(row, column, rowIndex, event) {
+       console.log("onCellMouseDown");
       this.$emit('on-cell-mousedown', {
         row,
         column,
