@@ -243,7 +243,7 @@
                 />
               </th>
               <td
-                @click="onCellClicked(row, column, index, $event)"
+               
                 @mousedown="onCellMouseDown(row, column, index, $event)"
                 v-for="(column, i) in columns"
                 :key="i"
