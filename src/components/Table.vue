@@ -244,6 +244,7 @@
               </th>
               <td
                 @click="onCellClicked(row, column, index, $event)"
+                @mousedown="onCellMouseDown(row, column, index, $event)"
                 v-for="(column, i) in columns"
                 :key="i"
                 :class="getClasses(i, 'td', row)"
@@ -1200,6 +1201,15 @@ export default {
 
     onCellClicked(row, column, rowIndex, event) {
       this.$emit('on-cell-click', {
+        row,
+        column,
+        rowIndex,
+        event,
+      });
+    },
+
+     onCellMouseDown(row, column, rowIndex, event) {
+      this.$emit('on-cell-mousedown', {
         row,
         column,
         rowIndex,
