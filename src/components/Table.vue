@@ -244,7 +244,7 @@
               </th>
               <td
                
-                @mousedown="onCellMouseDown(row, column, index, $event)"
+                v-on:mousedown="onCellMouseDown(row, column, index, $event)"
                 v-for="(column, i) in columns"
                 :key="i"
                 :class="getClasses(i, 'td', row)"
