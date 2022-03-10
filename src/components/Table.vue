@@ -1199,14 +1199,7 @@ export default {
       });
     },
 
-    onCellClicked(row, column, rowIndex, event) {
-      this.$emit('on-cell-click', {
-        row,
-        column,
-        rowIndex,
-        event,
-      });
-    },
+   
 
      onCellMouseDown(row, column, rowIndex, event) {
        console.log("onCellMouseDown");
