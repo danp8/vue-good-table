@@ -9370,6 +9370,14 @@ var script$6 = {
         event: event
       });
     },
+    onCellMouseOver: function onCellMouseOver(row, column, rowIndex, event) {
+      this.$emit('on-cell-mouseover', {
+        row: row,
+        column: column,
+        rowIndex: rowIndex,
+        event: event
+      });
+    },
     onMouseenter: function onMouseenter(row, index) {
       this.$emit('on-row-mouseenter', {
         row: row,
@@ -10147,6 +10155,9 @@ var __vue_render__$6 = function __vue_render__() {
             },
             "mouseup": function mouseup($event) {
               return _vm.onCellMouseUp(row, column, index, $event);
+            },
+            "mouseover": function mouseover($event) {
+              return _vm.onCellMouseOver(row, column, index, $event);
             },
             "click": function click($event) {
               return _vm.onCellMouseClick(row, column, index, $event);

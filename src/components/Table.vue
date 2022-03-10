@@ -246,6 +246,7 @@
                
                 @mousedown="onCellMouseDown(row, column, index, $event)"
                 @mouseup="onCellMouseUp(row, column, index, $event)"
+                @mouseover="onCellMouseOver(row, column, index, $event)"
                 @click="onCellMouseClick(row, column, index, $event)"
                 v-for="(column, i) in columns"
                 :key="i"
@@ -1221,6 +1222,15 @@ export default {
 
     onCellMouseUp(row, column, rowIndex, event) {
       this.$emit('on-cell-mouseup', {
+        row,
+        column,
+        rowIndex,
+        event,
+      });
+    },
+
+    onCellMouseOver(row, column, rowIndex, event) {
+      this.$emit('on-cell-mouseover', {
         row,
         column,
         rowIndex,
