@@ -42,7 +42,9 @@
     }
   },
   "dependencies": {
+    "@vue/cli-service": "^5.0.1",
     "date-fns": "^2.17.0",
+    "eslint-plugin-vue": "^8.5.0",
     "lodash.isequal": "^4.5.0"
   },
   "devDependencies": {

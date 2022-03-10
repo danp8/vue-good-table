@@ -244,7 +244,9 @@
               </th>
               <td
                
-                v-on:mousedown="onCellMouseDown(row, column, index, $event)"
+                @mousedown="onCellMouseDown(row, column, index, $event)"
+                @mouseup="onCellMouseUp(row, column, index, $event)"
+                @click="onCellMouseClick(row, column, index, $event)"
                 v-for="(column, i) in columns"
                 :key="i"
                 :class="getClasses(i, 'td', row)"
@@ -1199,11 +1201,29 @@ export default {
       });
     },
 
-   
+    onCellClick(row, column, rowIndex, event) {
+       console.log("onCellClick");
+      this.$emit('on-cell-click', {
+        row,
+        column,
+        rowIndex,
+        event,
+      });
+    },
 
      onCellMouseDown(row, column, rowIndex, event) {
        console.log("onCellMouseDown");
       this.$emit('on-cell-mousedown', {
+        row,
+        column,
+        rowIndex,
+        event,
+      });
+    },
+
+    onCellMouseUp(row, column, rowIndex, event) {
+       console.log("onCellMouseUp");
+      this.$emit('on-cell-mouseup', {
         row,
         column,
         rowIndex,
