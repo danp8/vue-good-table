@@ -1201,8 +1201,7 @@ export default {
       });
     },
 
-    onCellClick(row, column, rowIndex, event) {
-       console.log("onCellClick");
+    onCellMouseClick(row, column, rowIndex, event) {
       this.$emit('on-cell-click', {
         row,
         column,
@@ -1212,7 +1211,6 @@ export default {
     },
 
      onCellMouseDown(row, column, rowIndex, event) {
-       console.log("onCellMouseDown");
       this.$emit('on-cell-mousedown', {
         row,
         column,
@@ -1222,7 +1220,6 @@ export default {
     },
 
     onCellMouseUp(row, column, rowIndex, event) {
-       console.log("onCellMouseUp");
       this.$emit('on-cell-mouseup', {
         row,
         column,

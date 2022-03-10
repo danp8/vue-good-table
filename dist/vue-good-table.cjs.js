@@ -9346,8 +9346,7 @@ var script$6 = {
         event: event
       });
     },
-    onCellClick: function onCellClick(row, column, rowIndex, event) {
-      console.log("onCellClick");
+    onCellMouseClick: function onCellMouseClick(row, column, rowIndex, event) {
       this.$emit('on-cell-click', {
         row: row,
         column: column,
@@ -9356,7 +9355,6 @@ var script$6 = {
       });
     },
     onCellMouseDown: function onCellMouseDown(row, column, rowIndex, event) {
-      console.log("onCellMouseDown");
       this.$emit('on-cell-mousedown', {
         row: row,
         column: column,
@@ -9365,7 +9363,6 @@ var script$6 = {
       });
     },
     onCellMouseUp: function onCellMouseUp(row, column, rowIndex, event) {
-      console.log("onCellMouseUp");
       this.$emit('on-cell-mouseup', {
         row: row,
         column: column,
