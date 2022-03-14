@@ -19,3 +19,25 @@ table.vgt-table{
     }
   }
 }
+
+table.vgt-table-no-padding{
+  font-size: 16px;
+  border-collapse: collapse;
+  background-color: $table-bg;
+  width: 100%;
+  max-width: 100%;
+  table-layout: auto;
+  border: 1px solid $border-color;
+  & td {
+    padding: 0;
+    vertical-align: top;
+    border-bottom:  1px solid $border-color;
+    color: $text-color;
+  }
+  & tr.clickable {
+    cursor: pointer;
+    &:hover{
+      background-color: $highlight-color;
+    }
+  }
+}
